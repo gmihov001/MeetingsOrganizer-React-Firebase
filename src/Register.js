@@ -43,7 +43,7 @@ class Register extends Component {
       this.props.registerUser(registrationInfo.displayName); 
     })
     .catch( error => {
-      if(error.message !== null) this.setState({errorMessage: error.message});
+      if(error.message) this.setState({errorMessage: error.message});
       else this.setState({errorMessage: null}); 
     });
   };
